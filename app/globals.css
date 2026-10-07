@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --main-bg: #F8F7FC;
+  --sidebar-bg: #F1EFF7;
+  --topbar-bg: #FFFFFF;
+  --music-card-text: #111827;
+  --card-bg: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #5b656f;
+  --dropdown-bg: #FFFFFF;
+
+  --nav-icon: #adb2b7;
+  --section-title: #696e7c;
+  --purple: #7c3aed;
+  --text: #5b656f;
+}
+
+.dark {
+  --main-bg: #081114;
+  --sidebar-bg: #03090c;
+  --topbar-bg: #0D171A;
+  --music-card-text: #F9FAFB;
+  --card-bg: #0D191D;
+  --text-primary: #F9FAFB;
+  --text-secondary: #99a0ac;
+  --dropdown-bg: #0D171A;
+}
+
+@theme inline {
+  --color-main-bg: var(--main-bg);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-topbar-bg: var(--topbar-bg);
+  --color-music-card-text: var(--music-card-text);
+  --color-card-bg: var(--card-bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-dropdown-bg: var(--dropdown-bg);
+  --color-nav-icon: var(--nav-icon);
+  --color-section-title: var(--section-title);
+  --color-purple: var(--purple);
+  --color-text: var(--text);
+}
