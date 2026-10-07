@@ -1,6 +1,4 @@
 import MusicCard from "./MusicCard";
-import { ThemeContext } from "@/contexts/ThemeContext";
-import { useContext } from "react";
 
 const songs = [
   {
@@ -56,7 +54,6 @@ const songs = [
 ];
 
 export default function Library() {
-  const { isDark } = useContext(ThemeContext);
   return (
     <section className="bg-main-bg col-start-2 col-end-3 row-start-2 row-end-3 px-10 py-7 overflow-y-scroll">
       <h1 className="text-text-primary text-3xl font-bold mb-2">

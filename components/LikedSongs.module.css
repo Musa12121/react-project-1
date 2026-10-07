@@ -7,10 +7,6 @@
   transition: background-color 0.2s;
 }
 
-.rowDark:hover {
-  background-color: #1f2937; 
-}
+.row:hover { background-color: #c5c6c7; }
 
-.rowLight:hover {
-  background-color: #c5c6c7; 
-}
+:global(.dark) .row:hover { background-color: #1f2937; }

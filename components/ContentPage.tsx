@@ -1,7 +1,5 @@
 'use client'
 import MusicCard from "./MusicCard";
-import { useContext } from "react";
-import { ThemeContext } from "@/contexts/ThemeContext";
 
 const playlists = [
   { id: 1, name: "Chill Vibes", author: "Spotifly", imageUrl: "/chill_vibes.jpg" },
@@ -21,7 +19,6 @@ const songs = [
 ];
 
 export default function ContentPage() {
-  const {isDark} = useContext(ThemeContext);
 
   return (
     <div className=" bg-main-bg col-start-2 col-end-3 row-start-2 row-end-3 px-10 pb-10 pt-2 overflow-y-scroll flex flex-col gap-10 transition-colors">

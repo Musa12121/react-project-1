@@ -1,4 +1,3 @@
-import { ThemeContext } from "@/contexts/ThemeContext";
 import {
   Clock3,
   Heart,
@@ -6,7 +5,6 @@ import {
   Play,
 } from "lucide-react";
 import Image from "next/image";
-import { useContext } from "react";
 import styles from "./LikedSongs.module.css";
 
 const likedSongs = [
@@ -69,7 +67,6 @@ const likedSongs = [
 ];
 
 export default function LikedSongs() {
-  const {isDark}=useContext(ThemeContext)
   return (
     <section className="bg-main-bg col-start-2 col-end-3 row-start-2 row-end-3 px-10 py-7 overflow-y-auto">
       <div className="flex items-center gap-6 mb-8">
@@ -93,14 +90,14 @@ export default function LikedSongs() {
               <Play size={22} fill="white" />
             </button>
 
-            <button className="text-text-secondary hover:text-white transition-colors">
+            <button className="text-text-secondary hover:text-text-primary transition-colors">
               <MoreHorizontal size={26} />
             </button>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr_2fr_1.5fr_1.5fr_1fr_1fr] items-center px-4 pb-3 border-b border-gray-800 text-gray-500 font-bold text-lg">
+      <div className="grid grid-cols-[1fr_2fr_1.5fr_1.5fr_1fr_1fr] items-center px-4 pb-3 border-b border-gray-800 text-text-secondary font-bold text-lg">
         <span>#</span>
         <span>Title</span>
         <span>Artist</span>
@@ -113,9 +110,9 @@ export default function LikedSongs() {
         {likedSongs.map((song) => (
           <div
             key={song.id}
-            className={`${styles.row} ${isDark ? styles.rowDark : styles.rowLight}`}
+            className={styles.row}
           >
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-text-secondary">
               {song.id}
             </span>
 
@@ -127,25 +124,25 @@ export default function LikedSongs() {
               />
 
               <div>
-                <p style={{color:isDark ? "#fff":"#000"}} className="font-medium">
+                <p className="text-text-primary font-medium">
                   {song.title}
                 </p>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-text-secondary">
                   {song.artist}
                 </p>
               </div>
             </div>
 
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-text-secondary">
               {song.artist}
             </span>
 
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-text-secondary">
               {song.album}
             </span>
 
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-text-secondary">
               {song.duration}
             </span>
 

@@ -6,7 +6,6 @@ import { useContext, useRef } from "react";
 import SongLibrary from "@/components/SongLibrary";
 
 export default function Home() {
-  const { isDark, toggle } = useContext(ThemeContext);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const focusFunction = () => {

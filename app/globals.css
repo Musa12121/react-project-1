@@ -29,6 +29,38 @@
   --dropdown-bg: #0D171A;
 }
 
+/* High contrast, light */
+.hc {
+  --main-bg: #FFFFFF;
+  --sidebar-bg: #FFFFFF;
+  --topbar-bg: #FFFFFF;
+  --music-card-text: #000000;
+  --card-bg: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --dropdown-bg: #FFFFFF;
+  --nav-icon: #000000;
+  --section-title: #000000;
+  --purple: #5b21b6;
+  --text: #000000;
+}
+
+/* High contrast, dark (both classes on <html>) */
+.dark.hc {
+  --main-bg: #000000;
+  --sidebar-bg: #000000;
+  --topbar-bg: #000000;
+  --music-card-text: #FFFFFF;
+  --card-bg: #000000;
+  --text-primary: #FFFFFF;
+  --text-secondary: #FFFFFF;
+  --dropdown-bg: #000000;
+  --nav-icon: #FFFFFF;
+  --section-title: #FFFFFF;
+  --purple: #c4b5fd;
+  --text: #FFFFFF;
+}
+
 @theme inline {
   --color-main-bg: var(--main-bg);
   --color-sidebar-bg: var(--sidebar-bg);

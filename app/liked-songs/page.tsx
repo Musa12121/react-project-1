@@ -6,7 +6,6 @@ import { useContext, useRef } from "react";
 import LikedSongs from "@/components/LikedSongs";
 
 export default function Home() {
-  const { isDark, toggle } = useContext(ThemeContext);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const focusFunction = () => {

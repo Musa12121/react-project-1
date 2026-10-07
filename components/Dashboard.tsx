@@ -1,7 +1,3 @@
-"use client";
-
-import { useContext } from "react";
-import { ThemeContext } from "@/contexts/ThemeContext";
 import { Play, ArrowUpRight, Heart, Clock3 } from "lucide-react";
 import Image from "next/image";
 import MusicCard from "./MusicCard";
@@ -54,17 +50,15 @@ const topArtists = [
 ];
 
 export default function Dashboard() {
-  const { isDark } = useContext(ThemeContext);
   return (
     <section className="bg-main-bg col-start-2 col-end-3 row-start-2 row-end-3 px-10 py-7 overflow-y-scroll">
       <div>
         <h1
-          style={{ color: isDark ? "white" : "black" }}
-          className="text-2xl font-bold"
+          className="text-text-primary text-2xl font-bold"
         >
           Dashboard
         </h1>
-        <p style={{ color: isDark ? "gray" : "darkgray" }} className="text-lg">
+        <p className="text-text-secondary text-lg">
           Your music at a glance
         </p>
       </div>
@@ -95,7 +89,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div>
-            <p className="text-sm">Total Listens</p>{" "}
+            <p className="text-sm">Liked Songs</p>
             <p className="text-lg font-bold">128</p>
             <div className="flex items-center text-green-500">
               <ArrowUpRight size={16} />
@@ -145,13 +139,12 @@ export default function Dashboard() {
           className="bg-card-bg rounded-lg p-5"
         >
           <h2
-            style={{ color: isDark ? "white" : "black" }}
-            className="text-xl font-bold"
+            className="text-text-primary text-xl font-bold"
           >
             Listening Activity
           </h2>
 
-          <p className="text-gray-500">Your listening activity this week</p>
+          <p className="text-text-secondary ">Your listening activity this week</p>
           <div className="h-60 flex items-end justify-evenly mt-5">
             <div className="bg-purple-400 w-8 h-24 rounded-t" />
             <div className="bg-purple-400 w-8 h-32 rounded-t" />
@@ -171,18 +164,17 @@ export default function Dashboard() {
           className="bg-card-bg rounded-lg p-5"
         >
           <h2
-            style={{ color: isDark ? "white" : "black" }}
-            className="text-xl font-bold"
+            className="text-text-primary text-xl font-bold"
           >
             Top Genres
           </h2>
 
-          <p className="text-gray-500">Your most listened genres</p>
+          <p className="text-text-secondary ">Your most listened genres</p>
 
           <div className="flex justify-center items-center h-60">
             <div
-              style={{ color: isDark ? "white" : "black" }}
-              className="w-40 h-40 rounded-full border-30 border-purple-500 border-r-blue-400 border-b-orange-400 flex flex-col justify-center items-center"
+              
+              className="text-text-primary w-40 h-40 rounded-full border-30 border-purple-500 border-r-blue-400 border-b-orange-400 flex flex-col justify-center items-center"
             >
               <p className="text-xl font-bold">2340</p>
               <p>Listens</p>
@@ -195,8 +187,7 @@ export default function Dashboard() {
       <div className="lowerpartContainer grid grid-cols-[65fr_35fr] gap-5 mt-10">
         <div className="bg-card-bg recentlyPlayed rounded-lg p-5">
           <h2
-            style={{ color: isDark ? "white" : "black" }}
-            className="text-xl font-bold"
+            className="text-text-primary text-xl font-bold"
           >
             Recently Played
           </h2>
@@ -212,8 +203,7 @@ export default function Dashboard() {
           </ul>
         </div>
         <div
-          style={{ color: isDark ? "white" : "black" }}
-          className="bg-card-bg recentlyPlayed rounded-lg p-5"
+          className="text-text-primary bg-card-bg recentlyPlayed rounded-lg p-5"
         >
           <h2 className="text-xl font-bold">Your Top Artists</h2>
           <ul>
@@ -228,7 +218,7 @@ export default function Dashboard() {
                 />
                 <div>
                   <p className="font-bold">{artist.name}</p>
-                  <p className="text-gray-500">{artist.listens} listens</p>
+                  <p className="text-text-secondary ">{artist.listens} listens</p>
                 </div>
               </li>
             ))}

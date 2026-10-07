@@ -1,9 +1,6 @@
-import { ThemeContext } from "@/contexts/ThemeContext";
 import { Heart, LogOut, Settings, User } from "lucide-react";
-import { useContext } from "react";
 
 export default function ProfileDropdown() {
-  const { isDark } = useContext(ThemeContext);
   return (
     <div
       className="border border-text-secondary bg-dropdown-bg absolute flex flex-col gap-4 rounded-md shadow-lg p-4 right-0 mt-2 w-48 mx-2"

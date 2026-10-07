@@ -6,7 +6,6 @@ import { ThemeContext } from "@/contexts/ThemeContext";
 import { useContext, useRef } from "react";
 
 export default function Home() {
-  const { isDark, toggle } = useContext(ThemeContext);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const focusFunction = () => {

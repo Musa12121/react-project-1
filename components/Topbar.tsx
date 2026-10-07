@@ -6,7 +6,7 @@ import Image from "next/image";
 import ProfileDropdown from "./ProfileDropdown";
 
 export default function Topbar({ searchRef }) {
-  const { isDark,toggle } = useContext(ThemeContext);
+  const { toggle } = useContext(ThemeContext);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   return (
     <div className="bg-topbar-bg col-start-2 col-end-3 row-start-1 row-end-2 grid grid-cols-[60fr_40fr] items-center px-7 transition-colors">
