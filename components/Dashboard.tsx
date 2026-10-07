@@ -2,6 +2,7 @@ import { Play, ArrowUpRight, Heart, Clock3 } from "lucide-react";
 import Image from "next/image";
 import MusicCard from "./MusicCard";
 import styles from "./Dashboard.module.css";
+import Form from "./Form";
 
 const recentlyPlayed = [
   {
@@ -225,6 +226,7 @@ export default function Dashboard() {
           </ul>
         </div>
       </div>
+      <Form/>
     </section>
   );
 }
